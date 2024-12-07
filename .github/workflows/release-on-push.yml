@@ -3,7 +3,7 @@ name: Release Go CLI
 on:
   push:
     branches:
-      - fix # Trigger on pushes to the workflow branch
+      - main # Trigger on pushes to the main branch
 
 permissions:
   contents: write # Allows pushing to repository content (for release creation)
@@ -16,7 +16,7 @@ jobs:
 
     env:
       APP_NAME: goStorageHandler # Define the application name here
-      APP_VERSION : 1.1.0
+      APP_VERSION: 1.1.0 # Define the application version
 
     steps:
       # Step 1: Checkout the code
@@ -52,12 +52,12 @@ jobs:
         uses: ncipollo/release-action@v1
         with:
           artifacts: |
-            bin/${APP_NAME}-linux
-            bin/${APP_NAME}-darwin
-            bin/${APP_NAME}-windows.exe
+            bin/${{ env.APP_NAME }}-linux
+            bin/${{ env.APP_NAME }}-darwin
+            bin/${{ env.APP_NAME }}-windows.exe
           token: ${{ secrets.GITHUB_TOKEN }}
-          tag: v${APP_VERSION}
-          name: v${APP_VERSION}
+          tag: v${{ env.APP_VERSION }}
+          name: v${{ env.APP_VERSION }}
           body: |
             Automated release for commit ${{ github.sha }}
           prerelease: false
