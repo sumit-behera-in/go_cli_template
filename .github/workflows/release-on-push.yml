@@ -16,7 +16,7 @@ jobs:
 
     env:
       APP_NAME: goStorageHandler # Define the application name here
-      APP_VERSION: 1.1.0 # Define the application version
+      APP_VERSION: 1.1.1 # Define the application version
 
     steps:
       # Step 1: Checkout the code
@@ -60,4 +60,4 @@ jobs:
           name: v${{ env.APP_VERSION }}
           body: |
             Automated release for commit ${{ github.sha }}
-          prerelease: false
+          prerelease: true
