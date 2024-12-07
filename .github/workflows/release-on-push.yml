@@ -3,7 +3,7 @@ name: Release Go CLI
 on:
   push:
     branches:
-      - main # Trigger on pushes to the main branch
+      - fix # Trigger on pushes to the main branch
 
 permissions:
   contents: write # Allows pushing to repository content (for release creation)
