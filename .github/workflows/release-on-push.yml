@@ -15,8 +15,8 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      APP_NAME: goStorageHandler # Define the application name here
-      APP_VERSION: 1.2.0 # Define the application version
+      APP_NAME: goCLITemplate # Define the application name here
+      APP_VERSION: 1.2.1 # Define the application version
 
     steps:
       # Step 1: Checkout the code

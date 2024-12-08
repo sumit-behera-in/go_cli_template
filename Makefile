@@ -1,5 +1,5 @@
 # Define the application name
-APP_NAME = "goStorageHandler"
+APP_NAME = "goCLITemplate"
 
 # Detect the OS and architecture of the host system
 ifeq ($(OS),Windows_NT)
